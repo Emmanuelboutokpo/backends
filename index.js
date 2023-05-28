@@ -11,10 +11,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
- const category = require('./routes/catRoutes');
- const cars = require('./routes/carsRoutes');
- const brand = require('./routes/brandRoutes');
- const model = require('./routes/modelRoutes');
+ const category = require('./src/routes/catRoutes');
+ const cars = require('./src/routes/carsRoutes');
+ const brand = require('./src/routes/brandRoutes');
+ const model = require('./src/routes/modelRoutes');
 
  app.use(express.static(path.join(__dirname,"uploads")));  
  app.use("/api", category);  
